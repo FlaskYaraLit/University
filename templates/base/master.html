@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Univer Poplavskogo - {% block title %}{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css')}}">
+</head>
+<body>
+    <header>
+        <h1>Univer Poplavskogo</h1>
+    </header>
+    <hr>
+    <nav>
+        <div class="row">
+            <div class="col-md-6 left">
+                |
+                <a href="/">Главная</a>
+                |
+                <a href="/abitur">Абитуриентам</a>
+                |
+                <a href="/faculty">Факультеты</a>
+                |
+            </div>
+            <div class="col-md-6 right">
+                |
+                <a href="/univer/history">История</a>
+                |
+                <a href="/univer/photos">Фотографии</a>
+                |
+                <a href="/univer/rector">Ректор</a>
+                |
+            </div>
+        </div>
+    </nav>
+    <hr>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <hr>
+    <footer>
+        <h6>Copyright: Univer Poplavskogo - Kyiv, 2021</h6>
+    </footer>
+</body>
+</html>
